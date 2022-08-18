@@ -5,7 +5,7 @@
         current/deps {:local/root "."}
         io.github.borkdude/gh-release-artifact
         {:git/sha "cf082df46a648178d1904e9cbcb787d8136a35c6"}}
- :paths [".build"]
+ :paths [".build" "src"]
  :tasks
  {:requires ([clojure.edn :as edn]
              [clojure.string :as str]
@@ -59,7 +59,7 @@
                    (println "Uploading jar")
                    (run 'tag)
                    (run 'upload-jar)
-                   (clojure "-T:build deploy")
-                   )}
+                   (clojure "-T:build deploy"))}}}
+                   
 
-  }}
+  
